@@ -14,3 +14,6 @@
 - Created Redux Store with User Slice.
 - Implemented Sign out.
 - Update Profile.
+- BugFlix - If the user is not logged in Redirect /browse to Login page and vice versa.
+- BugFlix - Unsubscribe to the onAuthStateChange callback.
+- Add harcoded value to the constants file.
