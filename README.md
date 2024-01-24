@@ -17,3 +17,12 @@
 - BugFlix - If the user is not logged in Redirect /browse to Login page and vice versa.
 - BugFlix - Unsubscribe to the onAuthStateChange callback.
 - Add harcoded value to the constants file.
+- Register TMDB API and create an app and get access token
+- Get the data from the TMDB and now playing movies list API.
+- Custom hook for now playing movies
+- Create a movie slice
+- update store with movie data
+- planing for maincontainer and secondart container
+- Fetch data for trailer video
+- Update store with trailer video
+- Embed with youtube video and make it autoplay and mute.
