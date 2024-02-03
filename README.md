@@ -26,3 +26,8 @@
 - Fetch data for trailer video
 - Update store with trailer video
 - Embed with youtube video and make it autoplay and mute.
+- Build main container and added tailwind in it.
+- Build secondart container.
+- Added Movielist and MovieCard.
+- TMDB Image CDN API.
+- usePopularMovie and useNewPopularMovie custom hook.
