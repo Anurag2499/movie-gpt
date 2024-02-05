@@ -5,7 +5,11 @@ const MovieCard = ({ posterPath }) => {
   //   console.log(posterPath);
   return (
     <div className="w-36 pr-4 mr-2">
-      <img alt="Moviecard" src={IMG_CDN_URL + posterPath} />
+      <img
+        className="rounded-sm"
+        alt="Moviecard"
+        src={IMG_CDN_URL + posterPath}
+      />
     </div>
   );
 };

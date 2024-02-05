@@ -31,3 +31,8 @@
 - Added Movielist and MovieCard.
 - TMDB Image CDN API.
 - usePopularMovie and useNewPopularMovie custom hook.
+- GPT Search feature
+- GPT search page
+- GPT Search Bar
+- (Bonus) GPT Multi Lang Feature in our APP.
+- Integrate GPT APIs.

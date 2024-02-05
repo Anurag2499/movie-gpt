@@ -4,12 +4,16 @@ import { auth } from '../utils/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
-import { LOGO, USER_AVATAR } from '../utils/constants';
+import { LOGO, USER_AVATAR, SUPPORTED_LANGUAGES } from '../utils/constants';
+import { toggleGptSearchView } from '../utils/gptSlice';
+import { changeLanguage } from '../utils/configSlice';
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
+  const showGPTSearch = useSelector((store) => store.gpt.showGptSearch);
+
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {})
@@ -33,11 +37,38 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
+  const handleToggleGpt = () => {
+    // Toggle GPT Search view
+    dispatch(toggleGptSearchView());
+  };
+
+  const handleLanguage = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  };
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       <img className="w-48" src={LOGO} alt="logo" />
       {user && (
         <div className="flex">
+          {showGPTSearch && (
+            <select
+              className="h-[60%] m-auto  py-1 px-2  mx-4 text-white bg-gray-500 rounded-lg"
+              onChange={handleLanguage}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.id} value={lang.id}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            onClick={handleToggleGpt}
+            className="h-[60%] m-auto  py-1 px-2  mx-4 text-white bg-red-600 rounded-lg"
+          >
+            {showGPTSearch ? 'Home Page' : 'GPT Search'}
+          </button>
           <img
             src={USER_AVATAR}
             alt="userLogo"
