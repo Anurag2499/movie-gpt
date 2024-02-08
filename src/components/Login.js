@@ -87,16 +87,16 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className="opacity-90"
+          className="opacity-90 h-screen md:h-full object-cover"
           src={BG_URL}
           alt="bg"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-[30%] bg-black bg-opacity-80 my-40 py-12 px-16 mx-auto right-0 left-0 text-white rounded-lg"
+        className="absolute w-[80%] md:w-[30%] bg-black bg-opacity-80 my-40 py-12 px-16 mx-auto right-0 left-0 text-white rounded-lg"
       >
-        <h2 className="font-bold text-3xl py-2 mb-3">
+        <h2 className="font-bold text-xl md:text-3xl py-2 mb-3">
           {isSignIn ? 'Sign In' : 'Sign Up'}
         </h2>
         {!isSignIn && (
@@ -126,10 +126,16 @@ const Login = () => {
         >
           {isSignIn ? 'Sign In' : 'Sign Up'}
         </button>
-        <p className="cursor-pointer" onClick={toggleSignInForm}>
+        <p
+          className="cursor-pointer text-sm text-gray-200"
+          onClick={toggleSignInForm}
+        >
           {isSignIn
             ? 'New to Netflix? Sign up now.'
             : 'Already registered. Sign In.'}
+        </p>
+        <p className="mt-2 pt-2 text-xs text-gray-400">
+          It's a Netflix clone developed by Anurag Singh Dangi.
         </p>
       </form>
     </div>

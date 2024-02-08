@@ -9,6 +9,7 @@ import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import MovieDetail from './MovieDetail';
 import Movie from './Movie';
+import Footer from './Footer';
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const showMovieDetails = useSelector((store) => store.config.showInfo);
@@ -30,6 +31,7 @@ const Browse = () => {
       ) : (
         <>
           <MainContainer /> <SecondaryContainer />
+          <Footer />
         </>
       )}
     </div>

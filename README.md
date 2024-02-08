@@ -36,3 +36,9 @@
 - GPT Search Bar
 - (Bonus) GPT Multi Lang Feature in our APP.
 - Integrate GPT APIs.
+- Get Open AI Api key
+- Get Search API Call
+- Fetched GPT Movie suggestions from TMDB API
+- Created GPT Slice and Added data.
+- Memoization
+- Made our site responsive.x`

@@ -22,7 +22,10 @@ const MovieCard = ({ posterPath, movieId }) => {
 
   if (!posterPath) return null;
   return (
-    <div onClick={handleCardClick} className="w-36 pr-4 mr-2 cursor-pointer">
+    <div
+      onClick={handleCardClick}
+      className="w-28 md:w-40 pr-4 mr-2 cursor-pointer"
+    >
       <img
         className="rounded-sm"
         alt="Moviecard"

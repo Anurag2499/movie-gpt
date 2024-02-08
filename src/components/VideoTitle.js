@@ -1,16 +1,41 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeShowInfo } from '../utils/configSlice';
+import { setPlay } from '../utils/moviesSlice';
 
-const VideoTitle = ({ title, overview, isMute, setIsMute }) => {
+const VideoTitle = ({ movieId, title, overview, isMute, setIsMute }) => {
+  const dispatch = useDispatch();
+  const onPlay = () => {
+    dispatch(setPlay(movieId));
+  };
+  const handleCardClick = () => {
+    dispatch(
+      changeShowInfo({
+        show: true,
+        movieId: movieId,
+        movieDetails: {},
+        movieKeywords: [],
+        movieCredits: [],
+      })
+    );
+  };
+  console.log(movieId);
   return (
-    <div className="w-screen aspect-video pt-[15%] px-24 absolute text-white bg-gradient-to-r from-black">
-      <h1 className="font-bold text-6xl w-1/2 ">{title}</h1>
-      <p className="text-lg py-8 w-1/2 ">{overview}</p>
+    <div className="w-screen aspect-video pt-[15%] px-8 md:px-24 absolute text-white bg-gradient-to-r from-black">
+      <h1 className="font-bold text-lg md:text-5xl w-1/3 ">{title}</h1>
+      <p className="hidden md:inline-block text-lg py-8 w-[40%] ">{overview}</p>
       <div className="flex justify-between">
         <div>
-          <button className="bg-white text-black p-2 m-2 text-lg w-28 rounded-md hover:opacity-80 ">
+          <button
+            className="bg-white text-black p-1 m-1 md:p-2 md:m-2 text-sm md:text-lg w-16 md:w-28 rounded-md hover:opacity-80 "
+            onClick={onPlay}
+          >
             ▷ Play
           </button>
-          <button className="text-white bg-gray-500 p-2  m-2 text-lg w-28 rounded-md  bg-opacity-50 hover:opacity-40">
+          <button
+            onClick={handleCardClick}
+            className="text-white bg-gray-500 p-1 m-1 md:p-2 md:m-2 text-sm md:text-lg w-12 md:w-28 rounded-md  bg-opacity-50 hover:opacity-40 hidden md:inline-block"
+          >
             More Info
           </button>
         </div>

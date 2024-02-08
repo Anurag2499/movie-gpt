@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_OPTIONS } from '../utils/constants';
 import { addPopularMovies } from '../utils/moviesSlice';
 import { useEffect } from 'react';
 
 const usePopularMovies = () => {
+  const popularMovies = useSelector((store) => store.movies.popularMovies);
+
   const dispatch = useDispatch();
   // fetched the json from the TMDB api then using it by calling the useEffect hook and update appstore using dispatch
   const getPopularMovies = async () => {
@@ -16,7 +18,7 @@ const usePopularMovies = () => {
   };
 
   useEffect(() => {
-    getPopularMovies();
+    !popularMovies && getPopularMovies();
   }, []);
 };
 
