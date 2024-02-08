@@ -27,5 +27,5 @@ export const SUPPORTED_LANGUAGES = [
 
 // export const OPENAI_KEY = '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';
 // this openai is loggedin via anuragsinghdangi15@gmail.com
-// export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
-export const OPENAI_KEY = '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';
+export const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+// export const OPENAI_KEY = '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';
