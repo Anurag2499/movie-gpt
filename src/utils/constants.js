@@ -3,14 +3,12 @@ export const LOGO =
 
 export const USER_AVATAR =
   'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png';
-// 'https://occ-0-2087-2186.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABbwdSFv3QFDRDc0BknR3lQSOf7GFR9V54jw7TWVBwmyoYbTSbFRAi95ZEYeYPr1_7ZBXM4aGr0gv0r4HY4Ma2IEmL9bsUWE.png?r=a16';
 
 export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyODExMTlhNjFmNDA0ZTNhNjcyNGNiMzJlOGQ2MDBhMiIsInN1YiI6IjY1YWZiMmExM2UyZWM4MDBlYmYwOTgyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.m3nxGXYcWuPMgq4MB6PyV1GVhhiY5fMQOehXbmja-Oc',
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -28,4 +26,7 @@ export const SUPPORTED_LANGUAGES = [
 // export const OPENAI_KEY = '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';
 // this openai is loggedin via anuragsinghdangi15@gmail.com
 export const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
+// export const OPENAI_API_KEY =
+//   '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';
+
 // export const OPENAI_KEY = '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';

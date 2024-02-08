@@ -41,7 +41,7 @@ const Login = () => {
             displayName: name.current.value,
           })
             .then(() => {
-              console.log(user);
+              // console.log(user);
               const { uid, email, displayName } = auth.currentUser;
               dispatch(
                 addUser({ uid: uid, email: email, displayName: displayName })

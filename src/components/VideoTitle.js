@@ -19,7 +19,7 @@ const VideoTitle = ({ movieId, title, overview, isMute, setIsMute }) => {
       })
     );
   };
-  console.log(movieId);
+  // console.log(movieId);
   return (
     <div className="w-screen aspect-video pt-[15%] px-8 md:px-24 absolute text-white bg-gradient-to-r from-black">
       <h1 className="font-bold text-lg md:text-5xl w-1/3 ">{title}</h1>

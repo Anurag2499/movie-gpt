@@ -14,7 +14,7 @@ const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const showMovieDetails = useSelector((store) => store.config.showInfo);
   const playMovieId = useSelector((store) => store.movies.play);
-  console.log(showGptSearch);
+  // console.log(showGptSearch);
   // a custom hook which on rendering fetch the data of movies list and add in the movie Store.
   useNowPlayingMovies();
   usePopularMovies();

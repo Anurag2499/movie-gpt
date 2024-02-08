@@ -9,7 +9,7 @@ const GptSearchBar = () => {
   const dispatch = useDispatch();
   const langId = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
-  console.log(langId);
+  // console.log(langId);
 
   // Movies name and Search in TMDB.
   const searchMovieTMDB = async (movie) => {

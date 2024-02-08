@@ -7,7 +7,8 @@ const Movie = ({ movieId }) => {
   const dispatch = useDispatch();
   const isMute = 1;
   const trailerVideo = useSelector((store) => store.movies.trailerVideo);
-  console.log(trailerVideo);
+  // console.log(trailerVideo);
+  console.log('movie' + movieId);
   useMovieTrailer(movieId);
 
   const backToMain = () => {

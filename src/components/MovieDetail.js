@@ -75,6 +75,8 @@ const MovieDetail = () => {
     dispatch(changeShowInfo({ show: false, moveiId: null }));
   };
 
+  console.log(showInfo.movieId);
+  console.log(movieDetails?.original_title);
   return showInfo.show && Object.keys(movieDetails).length > 0 ? (
     <div className=" z-[1001] fixed top-0 left-0 flex pt-[5%] justify-center w-screen h-screen bg-black bg-opacity-90 overflow-hidden">
       <div className="relative w-full pb-4 bg-pink-900 border border-pink-900 rounded-xl shadow-lg md:w-3/5  h-fit border-spacing-10">
